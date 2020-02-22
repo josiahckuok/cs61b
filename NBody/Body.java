@@ -1,4 +1,5 @@
 public class Body {
+	/** calculations */
 	double xxPos;
 	double yyPos;
 	double xxVel;
@@ -84,7 +85,7 @@ public class Body {
 	}
 
 	/**
-	 * Determines how much the forces exerted on the body will cause that body to accelerate and the resulting change
+	 * Determine how much the forces exerted on the body will cause that body to accelerate and the resulting change
 	 * in the body’s velocity and position in a small period of time dt.
 	 */
 	public void update(double dt, double xForce, double yForce) {
@@ -96,4 +97,6 @@ public class Body {
 		this.xxPos += dt * this.xxVel;
 		this.yyPos += dt * this.yyVel;
 	}
+
+
 }
