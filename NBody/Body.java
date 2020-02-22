@@ -83,4 +83,17 @@ public class Body {
 		return netForce;
 	}
 
+	/**
+	 * Determines how much the forces exerted on the body will cause that body to accelerate and the resulting change
+	 * in the body’s velocity and position in a small period of time dt.
+	 */
+	public void update(double dt, double xForce, double yForce) {
+		double accelX = xForce / this.mass;
+		double accelY = yForce / this.mass;
+
+		this.xxVel += dt * accelX;
+		this.yyVel += dt * accelY;
+		this.xxPos += dt * this.xxVel;
+		this.yyPos += dt * this.yyVel;
+	}
 }
