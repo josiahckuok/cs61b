@@ -1,5 +1,5 @@
 public class Body {
-	/** calculations */
+
 	double xxPos;
 	double yyPos;
 	double xxVel;
@@ -98,5 +98,9 @@ public class Body {
 		this.yyPos += dt * this.yyVel;
 	}
 
-
+	/** Draw a body itself */
+	public void draw() {
+		String file = "./images/" + this.imgFileName;
+		StdDraw.picture(this.xxPos, this.yyPos, file);
+	}
 }
