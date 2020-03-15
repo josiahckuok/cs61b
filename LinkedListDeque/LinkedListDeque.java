@@ -124,7 +124,7 @@ public class LinkedListDeque<T> {
         return helpGetRecursive(sentinel.next, index);
     }
 
-    /** Helper method of helpGetRecursive */
+    /** Helper method of getRecursive */
     public T helpGetRecursive(Node n, int i) {
         if (i == 0) {
             return n.item;
