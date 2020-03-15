@@ -121,15 +121,15 @@ public class LinkedListDeque<T> {
         if (index >  size - 1 || index < 0) {
             return null;
         }
-        return helpGetReverse(sentinel.next, index);
+        return helpGetRecursive(sentinel.next, index);
     }
 
     /** Helper method of helpGetRecursive */
-    public T helpGetReverse(Node n, int i) {
+    public T helpGetRecursive(Node n, int i) {
         if (i == 0) {
             return n.item;
         } else {
-            return helpGetReverse(n.next, i - 1);
+            return helpGetRecursive(n.next, i - 1);
         }
     }
 }
